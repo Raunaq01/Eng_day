@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival Games - Win Big!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .games-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            gap: 30px;
+        }
+        
+        .game-card {
+            flex: 1;
+            min-width: 250px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .game-header {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        
+        .knock-header {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+        }
+        
+        .cornhole-header {
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+        }
+        
+        .game-content {
+            padding: 20px;
+        }
+        
+        .game-details {
+            list-style-type: none;
+            margin: 15px 0;
+        }
+        
+        .game-details li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+            display: flex;
+            align-items: center;
+        }
+        
+        .game-details li:last-child {
+            border-bottom: none;
+        }
+        
+        .game-details li::before {
+            content: "🎯";
+            margin-right: 10px;
+        }
+        
+        .price {
+            background: #ff9f43;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .win-condition {
+            background: #2ecc71;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .date-notice {
+            text-align: center;
+            padding: 20px;
+            background: #f1c40f;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .games-container {
+                flex-direction: column;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Play Games and Win Big with Us</h1>
+            <p>Test your skills and win delicious food prizes!</p>
+        </div>
+        
+        <div class="games-container">
+            <div class="game-card">
+                <div class="game-header knock-header">Knock the Cups</div>
+                <div class="game-content">
+                    <h3>BOTTLE TOSS - CARNIVAL GAMES</h3>
+                    <div class="price">Entry Fee: ₹30</div>
+                    <ul class="game-details">
+                        <li>Two throws per game</li>
+                        <li>Knock down all glasses to win</li>
+                        <li>Perfect for testing your aim</li>
+                    </ul>
+                    <div class="win-condition">WIN DELICIOUS FOOD!</div>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header cornhole-header">Cornhole</div>
+                <div class="game-content">
+                    <h3>CLASSIC BAG TOSS GAME</h3>
+                    <div class="price">Entry Fee: ₹30</div>
+                    <ul class="game-details">
+                        <li>Two chances to score</li>
+                        <li>Get one bag in the hole to win</li>
+                        <li>Fun for all skill levels</li>
+                    </ul>
+                    <div class="win-condition">WIN DELICIOUS FOOD!</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="date-notice">
+            🎪 SPECIAL EVENT - ONLY ON 16th 🎪
+        </div>
+    </div>
+</body>
+</html>

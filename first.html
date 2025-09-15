@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knock the Cups</title>
+    <style>
+        h1 {
+            color: black;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: sans-serif;
+        }
+        body {
+            padding: 20px;
+            margin: 0;
+            background-color: rgb(193, 226, 255);
+        }
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sub_main {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+        }
+        .image {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+            display: block;
+        }
+        /* Zigzag effect: alternate left and right alignment */
+        .image:nth-child(odd) {
+            margin-left: 10%;
+        }
+        .image:nth-child(even) {
+            margin-left: auto;
+            margin-right: 10%;
+        }
+        /* Desktop: 2 columns */
+        @media (min-width: 768px) {
+            .sub_main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .image:nth-child(odd) {
+                margin-left: 0;
+                justify-self: end;
+            }
+            .image:nth-child(even) {
+                margin-right: 0;
+                justify-self: start;
+            }
+        }
+        /* Mobile: single column */
+        @media (max-width: 767px) {
+            .sub_main {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+            .image {
+                max-width: 150px;
+            }
+            .image:nth-child(odd) {
+                margin-left: 0;
+                margin-right: auto;
+            }
+            .image:nth-child(even) {
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sub_main">
+            <img class="image" src="i2.jpg" alt="Cornhole Game">
+            <img class="image" src="i3.jpg" alt="Cornhole Game">
+            <img class="image" src="i4.jpg" alt="Cornhole Game">
+            <img class="image" src="i5.jpg" alt="Cornhole Game">
+            <img class="image" src="i6.jpg" alt="Cornhole Game">
+            <img class="image" src="i7.jpg" alt="Cornhole Game">
+        </div>
+    </div>
+</body>
+</html>
